@@ -8,6 +8,9 @@ class Sower(models.Model):
 	description = models.CharField(max_length=1000)
 	rating = RatingField(range=5)
 
+	def __unicode__(self):
+		return self.title
+
 class Grower(models.Model):
 
 	user = models.ForeignKey(User)

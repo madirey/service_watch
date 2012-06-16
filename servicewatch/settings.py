@@ -13,8 +13,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'servicewatch',                             # Or path to database file if using sqlite3.
-        'USER': 'servicewatch',                             # Not used with sqlite3.
-        'PASSWORD': '!234asdf',                             # Not used with sqlite3.
+        'USER': 'postgres',                                 # Not used with sqlite3.
+        'PASSWORD': 'abcd1234',                             # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
@@ -81,7 +81,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = ')ua4i6b5vuw@n+24m55mi(a!f5^&amp;24t8y1e6*&amp;j=!ix8y)o@=s'
+SECRET_KEY = '(ua4i6b4vuw@n+24m45mi(a!f5^&amp;24t8y1e6*&amp;i=!ix8y)y@=r'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (

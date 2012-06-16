@@ -6,9 +6,9 @@
 /* Variables
 -------------------------- */
 .radius {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 /* Base Rules 
 -------------------------- */
@@ -204,7 +204,7 @@ a:active {
   outline: none;
 }
 small {
-  font-size: 85%;
+  font-size: 88%;
 }
 strong,
 th {
@@ -218,7 +218,7 @@ td img {
 	gist.github.com/413930 */
 sub,
 sup {
-  font-size: 75%;
+  font-size: 78%;
   line-height: 0;
   position: relative;
 }
@@ -277,6 +277,12 @@ a:hover {
   color: #ffffff;
   background: #00b07d;
 }
+.skip {
+  font: 0/0 a;
+  color: transparent;
+  display: block;
+  border-bottom: none;
+}
 /* 2. Typography */
 h1,
 h2,
@@ -285,6 +291,7 @@ h4,
 h5,
 h6 {
   font-family: 'Signika', sans-serif;
+  font-weight: 600;
 }
 h1 {
   font-size: 2em;
@@ -342,7 +349,7 @@ p {
     *width: 65.6926648596383%;
   }
   .row .span7 {
-    width: 57.182320438000005%;
+    width: 57.182320438000008%;
     *width: 57.129128948638304%;
   }
   .row .span6 {
@@ -354,7 +361,7 @@ p {
     *width: 40.0020571266383%;
   }
   .row .span4 {
-    width: 31.491712705%;
+    width: 31.491712708%;
     *width: 31.4385212156383%;
   }
   .row .span3 {
@@ -403,23 +410,58 @@ body {
 }
 /* Module Rules
 -------------------------- */
+/* Nav */
+/* Buttons */
 .btn,
 .btn.accent {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 .btn {
   color: #333333;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+  padding: 0.5em;
+  border: 1px solid #00a172;
+  background: #00b07d;
+  background: -moz-linear-gradient(top, #00d99a 0%, #00a172 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00d99a), color-stop(100%, #00a172));
+  background: -webkit-linear-gradient(top, #00d99a 0%, #00a172 100%);
+  background: -o-linear-gradient(top, #00d99a 0%, #00a172 100%);
+  background: -ms-linear-gradient(top, #00d99a 0%, #00a172 100%);
+  background: linear-gradient(top, #00d99a 0%, #00a172 100%);
 }
-.btn.accent {
+.btn:hover {
+  background: #00b07d;
+  border: 1px solid #00a172;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
+  color: #333333;
+}
+.btn-small {
+  font-size: 0.875em;
+  padding: 0.375em;
+}
+.btn-large {
+  font-size: 1.5em;
+}
+.btn-accent {
   color: #ffffff;
+  border: 1px solid #edd93f;
+  background: #eedc4d;
+  background: -moz-linear-gradient(top, #f2e372 0%, #edd93f 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2e372), color-stop(100%, #edd93f));
+  background: -webkit-linear-gradient(top, #00d99a 0%, #edd93f 100%);
+  background: -o-linear-gradient(top, #f2e372 0%, #edd93f 100%);
+  background: -ms-linear-gradient(top, #f2e372 0%, #edd93f 100%);
+  background: linear-gradient(top, #f2e372 0%, #edd93f 100%);
 }
+/* Block */
 .block {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  background: #caffef;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #d9fff4;
   margin-bottom: 0.5em;
 }
 /* State Rules

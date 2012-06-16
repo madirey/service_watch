@@ -10,6 +10,7 @@
 @base: 1em;
 @baseBodyFont: Helvetica, Arial, sans-serif;
 @baseHeadingFont: 'Signika', sans-serif;
+@headingWeight: 600;
 @bodyColor: #333;
 @bodyColorInvert: #fff;
 @backgroundColor: #e8e8e8;
@@ -18,7 +19,7 @@
 @linkColor: #2d8f6a;
 @linkHover: @baseColor;
 
-@radius: 4px;
+@radius: 3px;
 .radius {
 	-webkit-border-radius: @radius;
 	   -moz-border-radius: @radius;
@@ -97,7 +98,7 @@ table {font-size: inherit; font: 100%;}
 	people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active {outline: none;}
 
-small {font-size: 85%;}
+small {font-size: 88%;}
 
 strong, th {font-weight: bold;}
 
@@ -105,7 +106,7 @@ td, td img {vertical-align: top;}
 
 /* Make sure sup and sub don't screw with your line-heights
 	gist.github.com/413930 */
-sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sub, sup {font-size: 78%; line-height: 0; position: relative;}
 sup {top: -0.5em;}
 sub {bottom: -0.25em;}
 
@@ -150,10 +151,18 @@ a:hover {
 	background: @baseColor;
 }
 
+.skip {
+	font: 0/0 a;
+	color: transparent;
+	display: block;
+	border-bottom: none;
+}
+
 /* 2. Typography */
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: @baseHeadingFont;
+	font-weight: @headingWeight;
 }
 
 h1 {
@@ -225,7 +234,7 @@ dl {}
 		*width: 65.6926648596383%;
 	}
 	.span7 {
-		width: 57.182320438000005%;
+		width: 57.182320438000008%;
 		*width: 57.129128948638304%;
 	}
 	.span6 {
@@ -237,7 +246,7 @@ dl {}
 		*width: 40.0020571266383%;
 	}
 	.span4 {
-		width: 31.491712705%;
+		width: 31.491712708%;
 		*width: 31.4385212156383%;
 	}
 	.span3 {
@@ -328,23 +337,66 @@ body {
 /* Module Rules
 -------------------------- */
 
+/* Nav */
 nav {}
 
+/* Buttons */
 .btn, .btn.accent {
 	.radius;
 }
 
 .btn {
 	color: @bodyColor;
+
+	box-shadow: inset 0 1px 1px rgba(255,255,255,0.5), 0 1px 2px rgba(0,0,0,0.2);
+	text-shadow: 0 1px 1px rgba(255,255,255,0.5);
+	padding: 0.5em;
+
+	border: 1px solid darken(@baseColor, 3%);
+	background: @baseColor;
+	background: -moz-linear-gradient(top,  lighten(@baseColor, 8%) 0%, darken(@baseColor, 3%) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@baseColor, 8%)), color-stop(100%,darken(@baseColor, 3%)));
+	background: -webkit-linear-gradient(top,  lighten(@baseColor, 8%) 0%,darken(@baseColor, 3%) 100%);
+	background: -o-linear-gradient(top,  lighten(@baseColor, 8%) 0%,darken(@baseColor, 3%) 100%);
+	background: -ms-linear-gradient(top,  lighten(@baseColor, 8%) 0%,darken(@baseColor, 3%) 100%);
+	background: linear-gradient(top,  lighten(@baseColor, 8%) 0%,darken(@baseColor, 3%) 100%);
+
+	&:hover {
+		background: @baseColor;
+		border: 1px solid darken(@baseColor, 3%);
+		box-shadow: inset 0 1px 3px rgba(0,0,0,0.25);
+		color: @bodyColor;
+	
+	}
+
 }
 
-.btn.accent {
+.btn-small {
+	font-size: @base * 0.875;
+	padding: 0.375em;
+}
+
+.btn-large {
+	font-size: @base * 1.5;
+}
+
+.btn-accent {
 	color: @bodyColorInvert;
+
+	border: 1px solid darken(@accentColor, 3%);
+	background: @accentColor;
+	background: -moz-linear-gradient(top,  lighten(@accentColor, 8%) 0%, darken(@accentColor, 3%) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@accentColor, 8%)), color-stop(100%,darken(@accentColor, 3%)));
+	background: -webkit-linear-gradient(top,  lighten(@baseColor, 8%) 0%,darken(@accentColor, 3%) 100%);
+	background: -o-linear-gradient(top,  lighten(@accentColor, 8%) 0%,darken(@accentColor, 3%) 100%);
+	background: -ms-linear-gradient(top,  lighten(@accentColor, 8%) 0%,darken(@accentColor, 3%) 100%);
+	background: linear-gradient(top,  lighten(@accentColor, 8%) 0%,darken(@accentColor, 3%) 100%);
 }
 
+/* Block */
 .block {
 	.radius;
-	background: lighten(@baseColor, 55%);
+	background: lighten(@baseColor, 58%);
 	margin-bottom: 0.5em;
 }
 

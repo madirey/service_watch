@@ -1,0 +1,404 @@
+/*
+/*  Service Watch
+/*
+/*  Startup Weekend CSS
+/*  ---------------------- */
+
+/* Variables
+-------------------------- */
+
+@base: 1em;
+@baseBodyFont: Helvetica, Arial, sans-serif;
+@baseHeadingFont: 'Signika', sans-serif;
+@headingWeight: 600;
+@bodyColor: #333;
+@bodyColorInvert: #fff;
+@backgroundColor: #e8e8e8;
+@baseColor: #00b07d;
+@accentColor: #eedc4d;
+@linkColor: #2d8f6a;
+@linkHover: @baseColor;
+
+@radius: 3px;
+.radius {
+	-webkit-border-radius: @radius;
+	   -moz-border-radius: @radius;
+	        border-radius: @radius;
+}
+
+/* Base Rules 
+-------------------------- */
+
+/* 1. Reset */
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}									
+
+article, aside, figure, footer, header, hgroup, nav, section {display: block;}
+
+/* Responsive images and other embedded objects
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+   If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
+img,
+object,
+embed {max-width: 100%;}
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {overflow-y: scroll;}
+
+/* we use a lot of ULs that aren't bulleted. 
+	don't forget to restore the bullets within content. */
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse: collapse; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom; *vertical-align: baseline;}
+.ie6 input {vertical-align: text-bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+table {font-size: inherit; font: 100%;}
+ 
+/* Accessible focus treatment
+	people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active {outline: none;}
+
+small {font-size: 88%;}
+
+strong, th {font-weight: bold;}
+
+td, td img {vertical-align: top;} 
+
+/* Make sure sup and sub don't screw with your line-heights
+	gist.github.com/413930 */
+sub, sup {font-size: 78%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+/* hand cursor on clickable elements */
+.clickable,
+label, 
+input[type=button], 
+input[type=submit], 
+button {cursor: pointer;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin: 0;}
+
+/* make buttons play nice in IE */
+button {width: auto; overflow: visible;}
+
+/* General Styles */
+
+body {
+	font-family: @baseBodyFont;
+	color: @bodyColor; 
+	font-size: @base;
+	line-height: @base * 1.5;
+}
+
+a {
+	color: @linkColor;
+	text-decoration: none;
+	border-bottom: 1px dotted @linkColor; }
+
+a:hover {
+	color: @linkHover;
+	border: none;
+	background: lighten(@linkHover, 60%); }
+
+::-moz-selection,
+::selection {
+	color: @bodyColorInvert;
+	background: @baseColor;
+}
+
+.skip {
+	font: 0/0 a;
+	color: transparent;
+	display: block;
+	border-bottom: none;
+}
+
+/* 2. Typography */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: @baseHeadingFont;
+	font-weight: @headingWeight;
+}
+
+h1 {
+	font-size: @base * 2;
+	line-height: @base * 1.5;
+}
+
+h2 {
+	font-size: @base * 1.75;
+	line-height: @base * 1.5;
+}
+h3 {
+	font-size: @base * 1.5;
+	line-height: @base * 1.5;
+}
+h4 {
+	font-size: @base * 1.25;
+	line-height: @base * 1.5;
+}
+h5 {
+	font-size: @base * 1.125;
+	line-height: @base * 1.5;
+}
+h6 {
+	font-size: @base;
+	line-height: @base * 1.5;
+	text-transform: uppercase;
+}
+
+p {
+	font-size: @base;
+	line-height: @base * 1.5;
+}
+
+blockquote {}
+
+ul {}
+
+ol {}
+
+dl {}
+
+/* 3. Grid */
+
+@media (min-width: 480px) {
+
+.row {
+    width: 100%;
+    *zoom: 1;
+
+    .span12 {
+   		width: 99.999999993%;
+    	*width: 99.9468085036383%;
+	}
+	.span11 {
+		width: 91.436464082%;
+		*width: 91.38327259263829%;
+	}
+	.span10 {
+		width: 82.87292817100001%;
+		*width: 82.8197366816383%;
+	}
+	.span9 {
+		width: 74.30939226%;
+		*width: 74.25620077063829%;
+	}
+	.span8 {
+		width: 65.74585634900001%;
+		*width: 65.6926648596383%;
+	}
+	.span7 {
+		width: 57.182320438000008%;
+		*width: 57.129128948638304%;
+	}
+	.span6 {
+		width: 48.618784527%;
+		*width: 48.5655930376383%;
+	}
+	.span5 {
+		width: 40.055248616%;
+		*width: 40.0020571266383%;
+	}
+	.span4 {
+		width: 31.491712708%;
+		*width: 31.4385212156383%;
+	}
+	.span3 {
+		width: 22.928176794%;
+		*width: 22.874985304638297%;
+	}
+	.span2 {
+		width: 14.364640883%;
+		*width: 14.311449393638298%;
+	}
+	.span1 {
+		width: 5.801104972%;
+		*width: 5.747913482638298%;
+	}
+
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+[class*="span"] {
+	display: block;
+	float: left;
+	width: 100%;
+	min-height: 28px;
+	margin-left: 2.762430939%;
+	*margin-left: 2.709239449638298%;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	        box-sizing: border-box;
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+}
+
+/* Offset */
+
+/* 4. Tables */
+
+table {}
+
+thead {}
+
+tbody {}
+
+tr {}
+
+td {}
+
+th {}
+
+caption {}
+
+/* 5. Forms */
+
+form {}
+
+.control {}
+
+label {}
+
+input[type="text"], textarea {}
+
+input[type="checkbox"], input[type="radio"] {}
+
+/* Layout Rules
+-------------------------- */
+
+header {}
+
+section {}
+
+footer {}
+
+body {
+	margin: 1em;
+}
+
+/* Module Rules
+-------------------------- */
+
+/* Nav */
+nav {}
+
+/* Buttons */
+.btn, .btn.accent {
+	.radius;
+}
+
+.btn {
+	color: @bodyColor;
+
+	box-shadow: inset 0 1px 1px rgba(255,255,255,0.5), 0 1px 2px rgba(0,0,0,0.2);
+	text-shadow: 0 1px 1px rgba(255,255,255,0.5);
+	padding: 0.5em;
+
+	border: 1px solid darken(@baseColor, 3%);
+	background: @baseColor;
+	background: -moz-linear-gradient(top,  lighten(@baseColor, 8%) 0%, darken(@baseColor, 3%) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@baseColor, 8%)), color-stop(100%,darken(@baseColor, 3%)));
+	background: -webkit-linear-gradient(top,  lighten(@baseColor, 8%) 0%,darken(@baseColor, 3%) 100%);
+	background: -o-linear-gradient(top,  lighten(@baseColor, 8%) 0%,darken(@baseColor, 3%) 100%);
+	background: -ms-linear-gradient(top,  lighten(@baseColor, 8%) 0%,darken(@baseColor, 3%) 100%);
+	background: linear-gradient(top,  lighten(@baseColor, 8%) 0%,darken(@baseColor, 3%) 100%);
+
+	&:hover {
+		background: @baseColor;
+		border: 1px solid darken(@baseColor, 3%);
+		box-shadow: inset 0 1px 3px rgba(0,0,0,0.25);
+		color: @bodyColor;
+	
+	}
+
+}
+
+.btn-small {
+	font-size: @base * 0.875;
+	padding: 0.375em;
+}
+
+.btn-large {
+	font-size: @base * 1.5;
+}
+
+.btn-accent {
+	color: @bodyColorInvert;
+
+	border: 1px solid darken(@accentColor, 3%);
+	background: @accentColor;
+	background: -moz-linear-gradient(top,  lighten(@accentColor, 8%) 0%, darken(@accentColor, 3%) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@accentColor, 8%)), color-stop(100%,darken(@accentColor, 3%)));
+	background: -webkit-linear-gradient(top,  lighten(@baseColor, 8%) 0%,darken(@accentColor, 3%) 100%);
+	background: -o-linear-gradient(top,  lighten(@accentColor, 8%) 0%,darken(@accentColor, 3%) 100%);
+	background: -ms-linear-gradient(top,  lighten(@accentColor, 8%) 0%,darken(@accentColor, 3%) 100%);
+	background: linear-gradient(top,  lighten(@accentColor, 8%) 0%,darken(@accentColor, 3%) 100%);
+}
+
+/* Block */
+.block {
+	.radius;
+	background: lighten(@baseColor, 58%);
+	margin-bottom: 0.5em;
+}
+
+/* State Rules
+-------------------------- */

@@ -1,0 +1,6 @@
+{% load comments %}
+<h1> {{sower.title}} </h1>
+<p> {{sower.description}} </p>
+<h2> Comments </h2>
+{% render_comment_list for sower %}
+{% render_comment_form for sower %}

@@ -3,7 +3,7 @@ from django.conf.urls import patterns, include, url
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 from servicewatch import models
-from servicewatch.api import SowerResource
+from servicewatch.api import SowerResource, GrowerResource, TaskResource
 from tastypie.api import Api
 
 admin.autodiscover()
@@ -13,6 +13,8 @@ admin.site.register(models.Task)
 
 v1_api = Api(api_name='v1')
 v1_api.register(SowerResource())
+v1_api.register(GrowerResource())
+v1_api.register(TaskResource())
 
 urlpatterns = patterns('',
     # Examples:

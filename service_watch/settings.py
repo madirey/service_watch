@@ -1,4 +1,4 @@
-# Django settings for service_watch project.
+# Django settings for servicewatch project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -81,7 +81,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'xr5^2fhk45x2k9=&amp;r2ugaqk&amp;c6l4va@6pw*irifj^&amp;@+f+&amp;j@@'
+SECRET_KEY = ')ua4i6b5vuw@n+24m55mi(a!f5^&amp;24t8y1e6*&amp;j=!ix8y)o@=s'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -100,10 +100,10 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'service_watch.urls'
+ROOT_URLCONF = 'servicewatch.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'service_watch.wsgi.application'
+WSGI_APPLICATION = 'servicewatch.wsgi.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".

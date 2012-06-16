@@ -2,7 +2,11 @@ from django.conf.urls import patterns, include, url
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+from servicewatch import models
 admin.autodiscover()
+admin.site.register(models.Sower)
+admin.site.register(models.Grower)
+admin.site.register(models.Task)
 
 urlpatterns = patterns('',
     # Examples:

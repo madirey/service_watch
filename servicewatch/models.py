@@ -5,7 +5,10 @@ class Sower(models.model):
 	description = models.CharField(limit=1000)
 	rating = RatingField(range=5)
 class Grower(models.model):
-	user = modles.ForeignKey(User)
+	user = models.ForeignKey(User)
 	rating = RatingField(range=5)
 class Task(models.model):
-
+	title = models.CharField(limit=40)
+	description = models.CharField(limit=400)
+	time = DateTimeField()
+	#tags

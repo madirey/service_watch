@@ -4,10 +4,12 @@ from djangoratings.fields import RatingField
 
 class Sower(models.Model):
 	user = models.ForeignKey(User)
+	title = models.CharField(max_length=40, default="You need a title")
 	description = models.CharField(max_length=1000)
 	rating = RatingField(range=5)
 
 class Grower(models.Model):
+
 	user = models.ForeignKey(User)
 	rating = RatingField(range=5)
 class Task(models.Model):

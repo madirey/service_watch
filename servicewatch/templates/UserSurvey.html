@@ -1,14 +1,15 @@
-<html>
-<head>
+{% extends "Base.html" %}
+
+{% block media %}
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="{{STATIC_URL}}js/tag-it.js" type="text/javascript" charset="utf-8"></script>
 	<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css">
 	<link href="{{STATIC_URL}}css/jquery.tagit.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="service_watch/servicewatch/static/css/style.css">
+{% endblock %}
 
-</head>
-<body>
+{% block content %}
 	<script type="text/javascript">
     	$(document).ready(function() {
         	$("#skills").tagit({
@@ -17,36 +18,44 @@
         	$("#interests").tagit({
         		availableTags: ["design","development","children","leadership","painting","typing","woodworking","photoshop","automobiles","dancing","entrepeneur","cooking","baking"]
         	});
+        	$('#skills_btn').click(function() {
+        		var tag = $(this).parent().find('.tagit-label:last').text();
+        		var list = $('#skills_settings').find('ul');
+        		list.append('<li>'+tag+'<br/><img src="/static/img/slider.png"/></li>');
+        	});
+        	$('#interests_btn').click(function() {
+        		var tag = $(this).parent().find('.tagit-label:last').text();
+        		var list = $('#passions_settings').find('ul');
+        		list.append('<li>'+tag+'<br/><img src="/static/img/slider.png"/></li>');
+        	});
     	});
     	$("#slider").slider();
 	</script>
 	<div class="row">
 		<div class="span6">
 			<h2>Skills</h2>
-			<ul id="skills">
+			<ul id="skills" class="ib">
 			</ul>
-			<button class="btn">Add</button>
+			<button id="skills_btn" class="btn ib" style="height:40px; margin-left:-5px;vertical-align:top;width:75px">Add</button>
 		</div>
 		<div class="span6">
 			<h2>Passions</h2>
-			<ul id="interests">
+			<ul id="interests" class="ib">
 			</ul>
-			<button class="btn">Add</button>
+			<button id="interests_btn" class="btn ib" style="height:40px; margin-left:-5px;vertical-align:top;width:75px">Add</button>
 		</div>
 	</div>
-		<div class="row">
-		<div class="span6">
-			<ul id="skills">
-			</ul>
-			<button class="btn">Add</button>
-		</div>
-		<div class="span6">
-			<ul id="interests">
-			</ul>
-			<button class="btn">Add</button>
-		</div>
+	<div class="row">
+	<div id="skills_settings" class="span6">
+		<ul>
+
+		</ul>
 	</div>
-	<form>
-		<textarea rows="20" cols="50">What qualifications do you have?</textarea>
-	</form>
-</body>
+	<div id="passions_settings" class="span6">
+		<ul>
+
+		</ul>
+	</div>
+	</div>
+
+{% endblock %}

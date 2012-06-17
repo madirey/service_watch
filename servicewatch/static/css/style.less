@@ -219,6 +219,24 @@ dl {}
     width: 100%;
     *zoom: 1;
 
+
+[class*="span"] {
+	display: block;
+	float: left;
+	width: 100%;
+	min-height: 28px;
+	margin-left: 2.762430939%;
+	*margin-left: 2.709239449638298%;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	        box-sizing: border-box;
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
     .span12 {
    		width: 99.999999993%;
     	*width: 99.9468085036383%;
@@ -306,10 +324,20 @@ dl {}
 	.offset2 {
 		margin-left: 14.364640883%;
 		*margin-left: 14.311449393638298%;
+
+		&:first-child {
+			margin-left: 14.364640883%;
+			*margin-left: 14.311449393638298%;
+		}
 	}
 	.offset1 {
 		margin-left: 5.801104972%;
 		*margin-left: 5.747913482638298%;
+
+		&:first-child {
+			margin-left: 5.801104972%;
+			*margin-left: 5.747913482638298%;
+		}
 	}
 
 	&:before,
@@ -319,23 +347,6 @@ dl {}
 	}
 	&:after {
 		clear: both;
-	}
-}
-
-[class*="span"] {
-	display: block;
-	float: left;
-	width: 100%;
-	min-height: 28px;
-	margin-left: 2.762430939%;
-	*margin-left: 2.709239449638298%;
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	    -ms-box-sizing: border-box;
-	        box-sizing: border-box;
-
-	&:first-child {
-		margin-left: 0;
 	}
 }
 
@@ -476,11 +487,13 @@ header {
 }
 
 .btn {
-	color: @bodyColor;
+	color: @bodyColorInvert;
 
-	box-shadow: inset 0 1px 1px rgba(255,255,255,0.5), 0 1px 2px rgba(0,0,0,0.2);
-	text-shadow: 0 1px 1px rgba(255,255,255,0.5);
+	box-shadow: inset 0 1px 1px rgba(255,255,255,0.5), 0 1px 1px rgba(0,0,0,0.1);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
 	padding: 0.5em;
+	text-align: center;
+	font-weight: bold;
 
 	border: 1px solid darken(@baseColor, 3%);
 	background: @baseColor;
@@ -493,8 +506,8 @@ header {
 
 	&:hover {
 		background: @baseColor;
-		border: 1px solid darken(@baseColor, 3%);
-		box-shadow: inset 0 1px 3px rgba(0,0,0,0.25);
+		border: 1px solid #ddcc49;
+		box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
 		color: @bodyColor;
 	}
 
@@ -508,6 +521,7 @@ header {
 	&-accent {
 		color: @bodyColor;
 
+		text-shadow: 0 1px 1px rgba(255,255,255,0.5);
 		border: 1px solid darken(@accentColor, 3%);
 		background: @accentColor;
 		background: -moz-linear-gradient(top,  lighten(@accentColor, 8%) 0%, darken(@accentColor, 3%) 100%);
@@ -523,6 +537,10 @@ header {
 			box-shadow: inset 0 1px 3px rgba(0,0,0,0.15);
 			color: @bodyColor;
 		}
+	}
+
+	&[class*="span"]:first-child {
+		margin-left: 2.762430939%;
 	}
 }
 
@@ -543,5 +561,14 @@ header {
 
 section.primary, section.accent {
 	margin: 0 -1em;
-	padding: 0 1em;
+	padding: 1em;
+}
+
+.callout {
+	font-size: @base * 1.75;
+	font-family: Helvetica, arial, sans-serif;
+	font-weight: 200;
+}
+#tagline {
+	padding-bottom: 3em;
 }

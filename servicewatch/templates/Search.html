@@ -9,8 +9,8 @@ src="http://maps.google.com/maps?file=api&v=2&key=AIzaSyBH4k3-ZsnI186nqsuO3JqWvG
 <script type="text/javascript">
 function initialize() {
 	if (GBrowserIsCompatible()) {
-		var map = new GMap2(document.getElementById("content"));
-		map.setCenter(new GLatLng(37.4419, -122.1419), 13);
+		var map = new GMap2(document.getElementById("map"));
+		map.setCenter(new GLatLng(38.8900, -77.0300), 13);
 		map.setUIToDefault();
 	}
 }
@@ -18,9 +18,14 @@ function initialize() {
 {% endblock %}
 
 {% block content %}
+<div id="map" style="width: 500px; height: 400px">
+</div>
 <script type="text/javascript">
 	$(document).ready(function() {
 		initialize();
+		{% for task in tasks %}
+		
+		{% endfor %}
 	});
 </script>
 {% endblock %}

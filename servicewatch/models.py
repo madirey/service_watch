@@ -41,7 +41,6 @@ class Task(models.Model):
 	description = models.CharField(max_length=400)
 	address = models.CharField(max_length=1000, null=True, blank=True)
 	time = models.DateTimeField()
-	rating = RatingField(range=5)
 
 	def __unicode__(self):
 		return self.title

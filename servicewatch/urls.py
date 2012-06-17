@@ -5,11 +5,12 @@ from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from servicewatch import models, views
 from servicewatch.api import SowerResource, GrowerResource, TaskResource
+from servicewatch import admin as sw_admin
 from tastypie.api import Api
 
 admin.autodiscover()
 admin.site.register(models.Sower)
-admin.site.register(models.Grower)
+admin.site.register(models.Tag)
 admin.site.register(models.Task)
 
 v1_api = Api(api_name='v1')
@@ -31,6 +32,7 @@ urlpatterns = patterns('',
 	url(r'^api/', include(v1_api.urls)),
 	url(r'^sower/(?P<id>\d+)', views.sower_profile),
     url(r'^grower/(?P<id>\d+)', views.grower_profile),
+    url(r'^task/(?P<id>\d+)', views.task_profile),
     url(r'^rating', views.sower_profile),
     url(r'^sower/img/(?P<path>.+)', views.image_redirect),
 )

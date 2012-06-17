@@ -705,8 +705,8 @@ ul.tag li:before {
   background: rgba(255, 255, 255, 0.5);
   padding: 0.25em 0.5em;
 }
-.accent {
-  background: #f2e57a url(../img/match-sample.png) center no-repeat;
+#matching {
+  background: #00b07d url(../img/match-sample.png) center no-repeat;
 }
 .accent .callout-h1:first-child {
   margin-top: 2.5em;

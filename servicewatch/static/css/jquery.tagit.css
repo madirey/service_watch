@@ -3,7 +3,7 @@ ul.tagit {
     overflow: auto;
     margin-left: inherit; /* usually we don't want the regular ul margins. */
     margin-right: inherit;
-    width:500px;
+    width:300px;
 }
 ul.tagit li {
     display: block;

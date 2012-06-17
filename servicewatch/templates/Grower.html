@@ -1,6 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+</head>
+
+<body>
 <h1> {{grower.name}}</h1>
 <ul>
 	{% for skill in grower.skills.all %}
 	<li>{{ skill.text }}</li>
 	{% endfor %}
 </ul>
+</body>

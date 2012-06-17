@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render_to_response
 from django.template import RequestContext
-from servicewatch.models import Sower 
+from servicewatch.models import Grower, Sower 
 
 def home(request):
 	return render_to_response('Home.html', { },

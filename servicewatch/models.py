@@ -21,8 +21,8 @@ class Tag(models.Model):
 class Grower(models.Model):
 	user = models.ForeignKey(User)
 	name = models.CharField(max_length=40)
-	skills = models.ManyToManyField(Tag, related_name='skills_growers')
-	interests = models.ManyToManyField(Tag, related_name='interests_growers')
+	skills = models.ManyToManyField(Tag, related_name='skills_growers', blank=True)
+	interests = models.ManyToManyField(Tag, related_name='interests_growers', blank=True)
 
 	rating = RatingField(range=5)
 

@@ -746,3 +746,20 @@ section.blank {
   height:200px;
   background-color:black;
 }
+#attend-box{
+  background-color:#A2A3A5;
+  width:inherit;
+  height:500px;
+  border-radius:10px;
+}
+#other-people{
+  width:200px;
+  display:block;
+  margin:0 auto 0 auto;
+}
+  .small-box{
+    width:40px;
+    margin-left:10px;
+    border-radius:40px;
+  }
+

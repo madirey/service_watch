@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+	<link rel="stylesheet" href="{{STATIC_URL}}css/style.css">
 </head>
 
 <body>
@@ -21,20 +21,55 @@
 		</ul>
 	</nav>
 </header>
+	<div class="row">
+		<div class="span9">
+			<h2>{{task.title}}</h2>
+			<h3>{{task.grower}}</h3>
+			<p>{{task.description}}</p>
+			<div id="details" class="span9">
+				<p><b>Address:       </b>{{task.address}}<p>
+				<p><b>Date:          </b>{{task.time}}</p>
+			</div>
+		</div>
+		<div class="span3">
+			<div id="black-image">
+			</div>
+			<div id="attend-box">
+				<button class="btn-large">I'm Attending</button>
+				<button class="btn-accent btn-large">I'll donate</button>
+				<div id="other-people">
+					<h3>Who's Coming:</h3>
+					<div class="small-box">
 
-	<div class="span9">
-		<h2>{{task.title}}</h2>
-		<h3>{{task.grower}}</h3>
-		<p>{{task.description}}</p>
-		<div id="details" class="span9">
-			<p><b>Address:       </b>{{task.address}}<p>
-			<p><b>Date:          </b>{{task.time}}</p>
+					</div>
+					<div class="small-box">
+
+					</div>
+					<div class="small-box">
+
+					</div>
+					<div class="small-box">
+
+					</div>
+					<div class="small-box">
+
+					</div>
+					<div class="small-box">
+
+					</div>
+					<div class="small-box">
+
+					</div>
+					<div class="small-box">
+
+					</div>
+					<div class="small-box">
+
+					</div>				
+				</div>	
+
+			</div>
 		</div>
 	</div>
-	<div class="span3">
-		<div id="box">
-		</div>
-	</div>
-
 <footer></footer>
 </body>

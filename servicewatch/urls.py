@@ -19,7 +19,7 @@ v1_api.register(TaskResource())
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'servicewatch.views.home', name='home'),
+    url(r'^$', views.home), 
     # url(r'^servicewatch/', include('servicewatch.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

@@ -36,3 +36,7 @@ def notifications(request):
 def search(request):
 	return render_to_response('Search.html', { },
 			context_instance=RequestContext(request))
+
+def demo(request):
+	return render_to_response('Demo.html', { },
+			context_instance=RequestContext(request))

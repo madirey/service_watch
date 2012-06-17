@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from servicewatch import models, views
 from servicewatch.api import SowerResource, GrowerResource, TaskResource
 from tastypie.api import Api
@@ -29,5 +30,8 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 	url(r'^api/', include(v1_api.urls)),
 	url(r'^sower/(?P<id>\d+)', views.sower_profile),
-    url(r'^rating', views.sower_profile)
+    url(r'^rating', views.sower_profile),
+    url(r'^sower/img/(?P<path>.+)', views.image_redirect),
 )
+
+urlpatterns += staticfiles_urlpatterns()

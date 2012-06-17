@@ -606,14 +606,6 @@ header > nav li a {
   background: #d9fff4;
   margin-bottom: 0.5em;
 }
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-
 .accent {
   background: #f2e57a;
 }

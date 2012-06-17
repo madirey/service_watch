@@ -1,31 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" href="{{STATIC_URL}}css/style.css">
-	
-</head>
+{% extends "Base.html" %}
 
-<body>
-<header>
-	<h1><a href="#">Styles</a></h1>
-
-	<!-- skip nav -->
-	<a href="#content" class="skip">Skip to Content</a>
-
-	<nav>
-		<ul>
-			<li><a href="#base">Base</a></li>
-			<li><a href="#layout">Layout</a></li>
-			<li><a href="#module">Module</a></li>
-			<li><a href="#state">State</a></li>
-			<li><a href="#theme">Theme</a></li>
-		</ul>
-	</nav>
-</header>
+{% block content %}
 	<div class="row">
 		<div class="span8">
 			<h2>{{task.title}}</h2>
 			<h3>{{task.grower}}</h3>
+			<h3><a href="/sower/1">Sturdy Wings</a></h3>
 			<p>{{task.description}}</p>
 			<form>
 				<div class="control">
@@ -100,5 +80,4 @@
 		</div>
 		
 	</div>
-<footer></footer>
-</body>
+{% endblock %}

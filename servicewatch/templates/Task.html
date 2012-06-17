@@ -22,9 +22,19 @@
 	</nav>
 </header>
 
-<div id="content">
-	{{ task.title }}
-</div>
+	<div class="span9">
+		<h2>{{task.title}}</h2>
+		<h3>{{task.grower}}</h3>
+		<p>{{task.description}}</p>
+		<div id="details" class="span9">
+			<p><b>Address:       </b>{{task.address}}<p>
+			<p><b>Date:          </b>{{task.time}}</p>
+		</div>
+	</div>
+	<div class="span3">
+		<div id="box">
+		</div>
+	</div>
 
 <footer></footer>
 </body>

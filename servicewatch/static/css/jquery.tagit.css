@@ -48,7 +48,7 @@ ul.tagit input[type="text"] {
     border: none;
     margin: 0;
     padding: 0;
-    width: inherit;
+    width: 500px;
     background-color: inherit;
     outline: none;
 }

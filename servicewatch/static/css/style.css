@@ -778,3 +778,8 @@ section.blank {
 .notification-block .span2 a {
   display: block;
 }
+#black-image {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+}

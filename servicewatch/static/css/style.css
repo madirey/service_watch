@@ -658,6 +658,8 @@ header > nav li a {
 .primary,
 .blank {
   font-size: 0.5em;
+  min-height: 300px;
+  border-bottom: 10px solid #fff;
 }
 @media (min-width: 600px) {
   .accent,
@@ -705,11 +707,14 @@ header > nav li a {
   text-align: right;
 }
 .blank {
-  background: #fff;
+  background: url(../img/sample-map.png) center;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
 .blank .callout-h1 {
   color: #fff;
+}
+.blank .callout-h1:first-child {
+  margin-top: 2.5em;
 }
 .blank .callout-h1 span {
   background: rgba(0, 176, 125, 0.85);

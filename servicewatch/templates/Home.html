@@ -5,7 +5,19 @@
 <title>Deedsly</title>
 <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
 <link href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
-
+<script type="text/javascript"
+src="http://maps.google.com/maps?file=api&v=2&key=AIzaSyBH4k3-ZsnI186nqsuO3JqWvG_4lwwMT0o&sensor=false">
+</script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.min.js"></script>
+<script type="text/javascript">
+function initialize() {
+	if (GBrowserIsCompatible()) {
+		var map = new GMap2(document.getElementById("content"));
+		map.setCenter(new GLatLng(37.4419, -122.1419), 13);
+		map.setUIToDefault();
+	}
+}
+</script>
 </head>
 
 <body>
@@ -46,6 +58,13 @@
 	<section id="local" class="blank">
 		<h1 class="callout-h1 right"><span>Localized opportunities to</span></h1>
 		<h1 class="callout-h1 right"><span>build and grow your community</span></h1>
+		<div class="map">
+			<script type="text/javascript">
+				$(document).ready(function() {
+					initialize();
+				});
+			</script>
+		</div>
 	</section>
 	<section id="features" class="primary">
 	</section>

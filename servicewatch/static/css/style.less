@@ -600,6 +600,9 @@ header {
 
 .accent, .primary, .blank {
 	font-size: @base * 0.5;
+	min-height: 300px;
+	border-bottom: 10px solid #fff;
+
 	@media (min-width: 600px) {
 		font-size: @base * 1;
 	}
@@ -648,11 +651,15 @@ header {
 }
 
 .blank {
-	background: #fff;
+	background: url(../img/sample-map.png) center;
 	text-shadow: 0 1px 3px rgba(0,0,0,0.25);
 
 	.callout-h1 {
 		color: #fff;
+
+		&:first-child {
+			margin-top: 2.5em;
+		}
 
 		span {
 			background: rgba(0,176,125, 0.85);

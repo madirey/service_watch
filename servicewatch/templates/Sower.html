@@ -2,37 +2,62 @@
 
 {% block content %}
 <div class="row">
-<div class="span7">
+<div class="span8">
 
 	<h1>{{sower.title}}</h1>
 	<p>{{sower.description}}</p>
 
-<table width="400">
-	<tr>
-		<td>Location</td><td>{{sower.address}}</td>	
-	</tr>
-	<tr>
-		<td>Phone</td><td>{{sower.phone}}</td>	
-	</tr>
-	<tr>
-		<td>Email</td><td>{{sower.website}}</td>	
-	</tr>
-	<tr>
-		<td>Website</td><td>{{sower.website}}</td>
-	</tr>
-	<tr>
-		<td>Twitter</td><td>{{sower.twitter}}</td>
-	</tr>
-	<tr>
-		<td>Facebook</td><td>{{sower.facebook}}</td>
-	</tr>
-</table>
+	<div class="control">
+        <label for="input01">Location</label>
+        <div class="controls">
+          {{sower.address}}
+        </div>
+    </div>
+    <div class="control">
+        <label for="input01">Phone</label>
+        <div class="controls">
+          {{sower.phone}}
+        </div>
+    </div>
+    <div class="control">
+        <label for="input01">Email</label>
+        <div class="controls">
+          {{sower.website}}
+        </div>
+    </div>
+    <div class="control">
+        <label for="input01">Website</label>
+        <div class="controls">
+          {{sower.website}}
+        </div>
+    </div>
+    <div class="control">
+        <label for="input01">Twitter</label>
+        <div class="controls">
+          {{sower.twitter}}
+        </div>
+    </div>
+    <div class="control">
+        <label for="input01">Facebook</label>
+        <div class="controls">
+          {{sower.facebook}}
+        </div>
+    </div>
 
 </div>
 
-<div class="span3">
+<div class="span4">
 map
 </div>
+</div>
+
+<div class="row">
+	<div class="span8">
+		<h2>Opportunities</h2>
+	</div>
+	<div class="span4">
+		<h2>Reviews</h2>
+	</div>
 </div>
 
 {% endblock %}

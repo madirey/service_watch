@@ -16,6 +16,8 @@
 @backgroundColor: #e8e8e8;
 @baseColor: #00b07d;
 @accentColor: #eedc4d;
+@accentBG: #f2e57a;
+@primaryBG: #00b07d;
 @linkColor: #2d8f6a;
 @linkHover: @baseColor;
 
@@ -217,6 +219,24 @@ dl {}
     width: 100%;
     *zoom: 1;
 
+
+[class*="span"] {
+	display: block;
+	float: left;
+	width: 100%;
+	min-height: 28px;
+	margin-left: 2.762430939%;
+	*margin-left: 2.709239449638298%;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	        box-sizing: border-box;
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
     .span12 {
    		width: 99.999999993%;
     	*width: 99.9468085036383%;
@@ -304,10 +324,20 @@ dl {}
 	.offset2 {
 		margin-left: 14.364640883%;
 		*margin-left: 14.311449393638298%;
+
+		&:first-child {
+			margin-left: 14.364640883%;
+			*margin-left: 14.311449393638298%;
+		}
 	}
 	.offset1 {
 		margin-left: 5.801104972%;
 		*margin-left: 5.747913482638298%;
+
+		&:first-child {
+			margin-left: 5.801104972%;
+			*margin-left: 5.747913482638298%;
+		}
 	}
 
 	&:before,
@@ -317,23 +347,6 @@ dl {}
 	}
 	&:after {
 		clear: both;
-	}
-}
-
-[class*="span"] {
-	display: block;
-	float: left;
-	width: 100%;
-	min-height: 28px;
-	margin-left: 2.762430939%;
-	*margin-left: 2.709239449638298%;
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	    -ms-box-sizing: border-box;
-	        box-sizing: border-box;
-
-	&:first-child {
-		margin-left: 0;
 	}
 }
 
@@ -372,7 +385,17 @@ input[type="checkbox"], input[type="radio"] {}
 /* Layout Rules
 -------------------------- */
 
-header {}
+header {
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+	}
+	&:after {
+		clear: both;
+	}
+
+}
 
 section {}
 
@@ -386,9 +409,58 @@ body {
 -------------------------- */
 
 /* Nav */
-header > nav {
-	li {
-		display: inline-block;
+header { 
+	margin: 3.25em 0;
+
+	h1 { 
+		float: left;
+		position: relative;
+		padding:0.25em 0 0 3.5em;
+
+		&:before, &:after {
+			content: "";
+			position: absolute;
+			background: rgba(0,176,125,0.5);
+			border-radius: 100%;
+		}
+		&:before {
+			width: 2em;
+			height: 2em;
+			top: 0;
+			left: 0;
+		}
+		&:after {
+			width: 1.5em;
+			height: 1.5em;
+			top: 0;
+			left: 1.5em;
+		}
+
+		a {
+		color: #333;
+		font-size: @base * 1.875;
+		font-weight: 700;
+
+			span { font-weight: 400;}
+		}
+	}
+
+	> nav {
+	float: right;
+	width: 50%;
+	margin-top: 0.75em;
+
+		li {
+			display: inline-block;
+			margin-left: 10%;
+
+			a {
+				color: #333;
+				font-size: @base * 0.8;
+				border-bottom: none;
+				text-transform: uppercase;
+			}
+		}
 	}
 }
 
@@ -415,11 +487,13 @@ header > nav {
 }
 
 .btn {
-	color: @bodyColor;
+	color: @bodyColorInvert;
 
-	box-shadow: inset 0 1px 1px rgba(255,255,255,0.5), 0 1px 2px rgba(0,0,0,0.2);
-	text-shadow: 0 1px 1px rgba(255,255,255,0.5);
+	box-shadow: inset 0 1px 1px rgba(255,255,255,0.5), 0 1px 1px rgba(0,0,0,0.1);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
 	padding: 0.5em;
+	text-align: center;
+	font-weight: bold;
 
 	border: 1px solid darken(@baseColor, 3%);
 	background: @baseColor;
@@ -432,8 +506,8 @@ header > nav {
 
 	&:hover {
 		background: @baseColor;
-		border: 1px solid darken(@baseColor, 3%);
-		box-shadow: inset 0 1px 3px rgba(0,0,0,0.25);
+		border: 1px solid #ddcc49;
+		box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
 		color: @bodyColor;
 	}
 
@@ -447,6 +521,7 @@ header > nav {
 	&-accent {
 		color: @bodyColor;
 
+		text-shadow: 0 1px 1px rgba(255,255,255,0.5);
 		border: 1px solid darken(@accentColor, 3%);
 		background: @accentColor;
 		background: -moz-linear-gradient(top,  lighten(@accentColor, 8%) 0%, darken(@accentColor, 3%) 100%);
@@ -463,6 +538,10 @@ header > nav {
 			color: @bodyColor;
 		}
 	}
+
+	&[class*="span"]:first-child {
+		margin-left: 2.762430939%;
+	}
 }
 
 /* Block */
@@ -470,4 +549,26 @@ header > nav {
 	.radius;
 	background: lighten(@baseColor, 58%);
 	margin-bottom: 0.5em;
+}
+
+.accent {
+	background: @accentBG;
+}
+
+.primary {
+	background: @primaryBG;
+}
+
+section.primary, section.accent {
+	margin: 0 -1em;
+	padding: 1em;
+}
+
+.callout {
+	font-size: @base * 1.75;
+	font-family: Helvetica, arial, sans-serif;
+	font-weight: 200;
+}
+#tagline {
+	padding-bottom: 3em;
 }

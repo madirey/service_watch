@@ -331,6 +331,21 @@ p {
     width: 100%;
     *zoom: 1;
   }
+  .row [class*="span"] {
+    display: block;
+    float: left;
+    width: 100%;
+    min-height: 28px;
+    margin-left: 2.762430939%;
+    *margin-left: 2.709239449638298%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .row [class*="span"]:first-child {
+    margin-left: 0;
+  }
   .row .span12 {
     width: 99.999999993%;
     *width: 99.9468085036383%;
@@ -419,7 +434,15 @@ p {
     margin-left: 14.364640883%;
     *margin-left: 14.311449393638298%;
   }
+  .row .offset2:first-child {
+    margin-left: 14.364640883%;
+    *margin-left: 14.311449393638298%;
+  }
   .row .offset1 {
+    margin-left: 5.801104972%;
+    *margin-left: 5.747913482638298%;
+  }
+  .row .offset1:first-child {
     margin-left: 5.801104972%;
     *margin-left: 5.747913482638298%;
   }
@@ -431,35 +454,75 @@ p {
   .row:after {
     clear: both;
   }
-  [class*="span"] {
-    display: block;
-    float: left;
-    width: 100%;
-    min-height: 28px;
-    margin-left: 2.762430939%;
-    *margin-left: 2.709239449638298%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  [class*="span"]:first-child {
-    margin-left: 0;
-  }
 }
 /* Offset */
 /* 4. Tables */
 /* 5. Forms */
 /* Layout Rules
 -------------------------- */
+header:before,
+header:after {
+  display: table;
+  content: "";
+}
+header:after {
+  clear: both;
+}
 body {
   margin: 1em;
 }
 /* Module Rules
 -------------------------- */
 /* Nav */
+header {
+  margin: 3.25em 0;
+}
+header h1 {
+  float: left;
+  position: relative;
+  padding: 0.25em 0 0 3.5em;
+}
+header h1:before,
+header h1:after {
+  content: "";
+  position: absolute;
+  background: rgba(0, 176, 125, 0.5);
+  border-radius: 100%;
+}
+header h1:before {
+  width: 2em;
+  height: 2em;
+  top: 0;
+  left: 0;
+}
+header h1:after {
+  width: 1.5em;
+  height: 1.5em;
+  top: 0;
+  left: 1.5em;
+}
+header h1 a {
+  color: #333;
+  font-size: 1.875em;
+  font-weight: 700;
+}
+header h1 a span {
+  font-weight: 400;
+}
+header > nav {
+  float: right;
+  width: 50%;
+  margin-top: 0.75em;
+}
 header > nav li {
   display: inline-block;
+  margin-left: 10%;
+}
+header > nav li a {
+  color: #333;
+  font-size: 0.8em;
+  border-bottom: none;
+  text-transform: uppercase;
 }
 .nav-stacked a {
   font-size: 1.25em;
@@ -486,10 +549,12 @@ header > nav li {
   border-radius: 3px;
 }
 .btn {
-  color: #333333;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.2);
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5), 0 1px 1px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
   padding: 0.5em;
+  text-align: center;
+  font-weight: bold;
   border: 1px solid #00a172;
   background: #00b07d;
   background: -moz-linear-gradient(top, #00d99a 0%, #00a172 100%);
@@ -501,8 +566,8 @@ header > nav li {
 }
 .btn:hover {
   background: #00b07d;
-  border: 1px solid #00a172;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
+  border: 1px solid #ddcc49;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   color: #333333;
 }
 .btn-small {
@@ -514,6 +579,7 @@ header > nav li {
 }
 .btn-accent {
   color: #333333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
   border: 1px solid #edd93f;
   background: #eedc4d;
   background: -moz-linear-gradient(top, #f2e372 0%, #edd93f 100%);
@@ -528,6 +594,9 @@ header > nav li {
   border: 1px solid #ebd62c;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
   color: #333333;
+}
+.btn[class*="span"]:first-child {
+  margin-left: 2.762430939%;
 }
 /* Block */
 .block {
@@ -544,4 +613,23 @@ header > nav li {
 
 .right {
   float: right;
+
+.accent {
+  background: #f2e57a;
+}
+.primary {
+  background: #00b07d;
+}
+section.primary,
+section.accent {
+  margin: 0 -1em;
+  padding: 1em;
+}
+.callout {
+  font-size: 1.75em;
+  font-family: Helvetica, arial, sans-serif;
+  font-weight: 200;
+}
+#tagline {
+  padding-bottom: 3em;
 }

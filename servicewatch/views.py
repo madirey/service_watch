@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render_to_response
 from django.template import RequestContext
-from servicewatch.models import Grower, Sower 
+from servicewatch.models import Grower, Sower, Task
 
 def home(request):
 	return render_to_response('Home.html', { },
@@ -12,6 +12,10 @@ def sower_profile(request, id):
 
 def grower_profile(request, id):
 	return render_to_response('Grower.html', { 'grower': Grower.objects.get(id=id) },
+			context_instance=RequestContext(request))
+
+def task_profile(request, id):
+	return render_to_response('Task.html', { 'task': Task.objects.get(id=id) },
 			context_instance=RequestContext(request))
 
 def image_redirect(request, path):

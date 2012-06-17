@@ -84,6 +84,9 @@ STATICFILES_FINDERS = (
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
+#SIMPLE_AUTOCOMPLETE_MODELS = ('auth.user',)
+
+
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '(ua4i6b4vuw@n+24m45mi(a!f5^&amp;24t8y1e6*&amp;i=!ix8y)y@=r'
 

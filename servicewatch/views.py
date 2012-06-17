@@ -1,7 +1,6 @@
 from django.shortcuts import redirect, render_to_response
 from django.template import RequestContext
-from servicewatch.models import Sower
-from servicewatch.models import Grower
+from servicewatch.models import Grower, Sower, Task
 
 def home(request):
 	return render_to_response('Home.html', { },
@@ -28,4 +27,12 @@ def org_survey(request):
 
 def task_profile(request, id):
 	return render_to_response('Task.html', { 'task': Task.objects.get(id=id) },
+			context_instance=RequestContext(request))
+
+def notifications(request):
+	return render_to_response('Notifications.html', { }, 
+			context_instance=RequestContext(request))
+
+def search(request):
+	return render_to_response('Search.html', { },
 			context_instance=RequestContext(request))

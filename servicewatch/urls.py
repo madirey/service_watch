@@ -37,6 +37,8 @@ urlpatterns = patterns('',
     url(r'^task/(?P<id>\d+)', views.task_profile),
     url(r'^rating', views.sower_profile),
     url(r'^sower/img/(?P<path>.+)', views.image_redirect),
+	url(r'^notifications/?', views.notifications),
+	url(r'^search/?', views.search),
 )
 
 urlpatterns += staticfiles_urlpatterns()

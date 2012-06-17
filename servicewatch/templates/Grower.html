@@ -9,7 +9,7 @@
 
 <h2>Skills</h2>
 
-<ul>
+<ul class="tag">
 	{% for skill in grower.skills.all %}
 	<li>{{ skill.text }}</li>
 	{% endfor %}
@@ -17,13 +17,15 @@
 
 <h2>Interests</h2>
 
-<ul>
-	<li>interest tag</li>
+<ul class="tag">
+	<li>Environment</li>
+	<li>Kids</li>
+	<li>Animals</li>
 </ul>
 
 </div>
 <div class="span4">
-	Volunteer image
+	<img src="{{ STATIC_URL }}img/sample-img.png" class="ib">
 </div>
 </div>
 
@@ -31,12 +33,17 @@
 	<div class="span8">
 		<h2>I've volunteered for</h2>
 		<ul>
-			<li>Company A</li>
-			<li>Company B</li>
+			<li><img src="{{ STATIC_URL }}img/sample-img.png" class="ib"></li>
+			<li><img src="{{ STATIC_URL }}img/sample-img.png" class="ib"></li>
 		</ul>
 	</div>
 	<div class="span4">
-		<h2>Reviews</h2>
+		<h2>Rating</h2>
+		<img src="{{ STATIC_URL }}img/star-on.png" class="ib">
+        <img src="{{ STATIC_URL }}img/star-on.png" class="ib">
+        <img src="{{ STATIC_URL }}img/star-on.png" class="ib">
+        <img src="{{ STATIC_URL }}img/star-half.png" class="ib">
+        <img src="{{ STATIC_URL }}img/star-off.png" class="ib">
 	</div>
 </div>
 {% endblock %}

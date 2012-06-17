@@ -160,6 +160,10 @@ a:hover {
 	border-bottom: none;
 }
 
+.ib {
+	display: inline-block;
+}
+
 h1 a {
 	border-bottom: none;
 }
@@ -591,6 +595,29 @@ header {
 	}
 }
 
+/* Tags */
+
+ul.tag li {
+	background: @primaryBG;
+	display: inline-block;
+	color: #fff;
+	padding: 0.25em 0.75em 0.25em 0.25em;
+	position: relative;
+	margin-left: 1.5em;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top:0;
+		left: -2em;
+		border-color: transparent @primaryBG transparent transparent;
+		border-style:solid;
+		border-width:16px;
+		width:0;
+		height:0;
+	}
+}
+
 /* Block */
 .block {
 	.radius;
@@ -700,7 +727,7 @@ section.primary, section.accent, section.blank {
 	margin-bottom: 1em;
 	}
 
-	.span11 {
+	.span7 {
 		background: #e8e8e8;
 		padding: 0.5em;
 		-webkit-border-radius: 4px 0 0 4px;

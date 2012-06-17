@@ -1,0 +1,86 @@
+{% extends "Base.html" %}
+
+{% block content %}
+<div class="row">
+<div class="span8">
+
+	<h1>Sturdy Wings</h1>
+	<p>Sturdy Wings is an organization that pairs troubled kids with mentors to foster learning and growth</p>
+
+	<div class="control">
+        <label for="input01">Location</label>
+        <div class="controls">
+          <p>108 Grafton St, Chevy Chase MD</p>
+        </div>
+    </div>
+    <div class="control">
+        <label for="input01">Phone</label>
+        <div class="controls">
+          <p>301 221 8781</p>
+        </div>
+    </div>
+    <div class="control">
+        <label for="input01">Email</label>
+        <div class="controls">
+          <p>sturdywings.org</p>
+        </div>
+    </div>
+
+    <div class="control">
+        <label for="input01">Twitter</label>
+        <div class="controls">
+          <p>twitter.com/#!/sturdywings</p>
+        </div>
+    </div>
+    <div class="control">
+        <label for="input01">Facebook</label>
+        <div class="controls">
+          <p>facebook.com/sturdywings</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="span4">
+    <img src="{{ STATIC_URL }}img/sample-img.png">
+</div>
+</div>
+
+<div class="row">
+	<div class="span8">
+		<h2>Opportunities</h2>
+        <ul>
+            <li class="notification-block">
+                <div class="row">
+                    <div class="span7">
+                        <h2>Mentoring Students</h2>
+                        <p>Being a mentor for a child is one of the most rewarding experience possible, both for you and the child. You'll be a role model for the child, providing a positive influence on their troubled lives.</p>
+                    </div>
+                    <div class="span1">
+                        <a href="#">Go to listing</a>
+                    </div>
+                </div>  
+            </li>
+            <li class="notification-block">
+                <div class="row">
+                    <div class="span7">
+                        <h2>Help the Elderly</h2>
+                        <p>Asssist the elderly in their daily living facilities.</p>
+                    </div>
+                    <div class="span1">
+                        <a href="#">Go to listing</a>
+                    </div>
+                </div>  
+            </li>
+        </ul>
+	</div>
+	<div class="span4">
+		<h2>Rating</h2>
+        <img src="{{ STATIC_URL }}img/star-on.png" class="ib">
+        <img src="{{ STATIC_URL }}img/star-on.png" class="ib">
+        <img src="{{ STATIC_URL }}img/star-on.png" class="ib">
+        <img src="{{ STATIC_URL }}img/star-on.png" class="ib">
+        <img src="{{ STATIC_URL }}img/star-half.png" class="ib">
+	</div>
+</div>
+{% endblock %}

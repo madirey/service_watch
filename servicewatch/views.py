@@ -40,3 +40,6 @@ def search(request):
 def demo(request):
 	return render_to_response('Demo.html', { },
 			context_instance=RequestContext(request))
+def sturdy_wings(request):
+	return render_to_response('sturdy_wings.html', { },
+		context_instance=RequestContext(request))

@@ -283,6 +283,9 @@ a:hover {
   display: block;
   border-bottom: none;
 }
+.ib {
+  display: inline-block;
+}
 h1 a {
   border-bottom: none;
 }

@@ -746,35 +746,5 @@ section.blank {
   height:200px;
   background-color:black;
 }
-#black-image{
-  width:200px;
-  height:200px;
-  background-color:black;
-}
-#attend-box{
-  background-color:#A2A3A5;
-  width:inherit;
-  height:200px;
-  border-radius:10px;
-  padding-top:20px;
-  text-align:center;
-  margin-top:20px;
-}
-#other-people{
-  width:inherit;
-  display:block;
-  margin:0 auto 0 auto;
-}
-  .small-box{
-    width:40px;
-    height:40px;
-    margin:5px 5px 5px 5px;
-    border-radius:40px;
-    background-color:black;
-    float:left;
-  }
-  #button-box{
-    text-align:center;
-    margin-bottom:10px;
-  }
+
 

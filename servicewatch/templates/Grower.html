@@ -3,26 +3,42 @@
 {% block content %}
 <div class="row">
 
-<div class="span7">
+<div class="span8">
 <h1>{{grower.name}}</h1>
 <p>{{grower.description}}</p>
 
-<h3>I've volunteered for</h3>
-<ul>
-	<li>Company A</li>
-	<li>Company B</li>
-</ul>
+<h2>Skills</h2>
 
-<h3>Skills</h3>
 <ul>
 	{% for skill in grower.skills.all %}
 	<li>{{ skill.text }}</li>
 	{% endfor %}
 </ul>
 
+<h2>Interests</h2>
+
+<ul>
+
+	<li>interest tag</li>
+
+</ul>
+
 </div>
-<div class="span3">
+<div class="span4">
 stuff
 </div>
+</div>
+
+<div class="row">
+	<div class="span8">
+		<h2>I've volunteered for</h2>
+		<ul>
+			<li>Company A</li>
+			<li>Company B</li>
+		</ul>
+	</div>
+	<div class="span4">
+		<h2>Reviews</h2>
+	</div>
 </div>
 {% endblock %}

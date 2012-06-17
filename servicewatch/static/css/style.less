@@ -89,7 +89,7 @@ pre {
 }
 
 input[type="radio"] {vertical-align: text-bottom;}
-input[type="checkbox"] {vertical-align: bottom; *vertical-align: baseline;}
+input[type="checkbox"] {vertical-align: middle; *vertical-align: baseline;}
 .ie6 input {vertical-align: text-bottom;}
 
 select, input, textarea {font: 99% sans-serif;}
@@ -374,9 +374,41 @@ caption {}
 
 form {}
 
-.control {}
+.control {
+	margin-bottom: 18px;
 
-label {}
+	&:before, &:after {
+		display: table;
+		content: "";
+	}
+	&:after {
+		clear: both;
+	}
+
+	> label { 
+	float: left;
+	width: 140px;
+	text-align: right;
+	font-size: @base * 0.9;
+	font-weight: 600;
+	}
+	
+}
+.controls {
+margin-left: 160px;
+}
+
+.help-block {
+	font-size: @base * 0.9;
+}
+
+.form-actions { 
+	margin-left: 160px;
+
+	.btn {
+		font-size: @base * 1;
+	}
+}
 
 input[type="text"], textarea {}
 
@@ -519,9 +551,9 @@ header {
 
 	&:hover {
 		background: @baseColor;
-		border: 1px solid #ddcc49;
+		border: 1px solid darken(@baseColor, 10%);
 		box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-		color: @bodyColor;
+		color: @bodyColorInvert;
 	}
 
 	&-small {
@@ -560,7 +592,7 @@ header {
 /* Block */
 .block {
 	.radius;
-	background: rgba(255,255,255,0.5);
+	background: lighten(@primaryBG, 40%);
 	margin-bottom: 0.5em;
 }
 

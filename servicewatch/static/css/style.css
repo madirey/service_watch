@@ -452,14 +452,69 @@ p {
 /* 5. Forms */
 /* Layout Rules
 -------------------------- */
+header:before,
+header:after {
+  display: table;
+  content: "";
+}
+header:after {
+  clear: both;
+}
 body {
   margin: 1em;
 }
 /* Module Rules
 -------------------------- */
 /* Nav */
+header {
+  margin: 3.25em 0;
+}
+header h1 {
+  float: left;
+  position: relative;
+  padding: 0.25em 0 0 3.5em;
+}
+header h1:before,
+header h1:after {
+  content: "";
+  position: absolute;
+  background: rgba(0, 176, 125, 0.5);
+  border-radius: 100%;
+}
+header h1:before {
+  width: 2em;
+  height: 2em;
+  top: 0;
+  left: 0;
+}
+header h1:after {
+  width: 1.5em;
+  height: 1.5em;
+  top: 0;
+  left: 1.5em;
+}
+header h1 a {
+  color: #333;
+  font-size: 1.875em;
+  font-weight: 700;
+}
+header h1 a span {
+  font-weight: 400;
+}
+header > nav {
+  float: right;
+  width: 50%;
+  margin-top: 0.75em;
+}
 header > nav li {
   display: inline-block;
+  margin-left: 10%;
+}
+header > nav li a {
+  color: #333;
+  font-size: 0.8em;
+  border-bottom: none;
+  text-transform: uppercase;
 }
 .nav-stacked a {
   font-size: 1.25em;
@@ -536,4 +591,15 @@ header > nav li {
   border-radius: 3px;
   background: #d9fff4;
   margin-bottom: 0.5em;
+}
+.accent {
+  background: #f2e57a;
+}
+.primary {
+  background: #00b07d;
+}
+section.primary,
+section.accent {
+  margin: 0 -1em;
+  padding: 0 1em;
 }

@@ -17,7 +17,7 @@ html,
 body,
 body div,
 span,
-object,
+object, 
 iframe,
 h1,
 h2,
@@ -718,4 +718,9 @@ section.blank {
 }
 #tagline {
   padding-bottom: 3em;
+}
+#black-image{
+  width:200px;
+  height:200px;
+  background-color:black;
 }

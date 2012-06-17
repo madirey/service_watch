@@ -182,7 +182,7 @@ input[type="radio"] {
   vertical-align: text-bottom;
 }
 input[type="checkbox"] {
-  vertical-align: bottom;
+  vertical-align: middle;
   *vertical-align: baseline;
 }
 .ie6 input {
@@ -458,6 +458,36 @@ p {
 /* Offset */
 /* 4. Tables */
 /* 5. Forms */
+.control {
+  margin-bottom: 18px;
+}
+.control:before,
+.control:after {
+  display: table;
+  content: "";
+}
+.control:after {
+  clear: both;
+}
+.control > label {
+  float: left;
+  width: 140px;
+  text-align: right;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.controls {
+  margin-left: 160px;
+}
+.help-block {
+  font-size: 0.9em;
+}
+.form-actions {
+  margin-left: 160px;
+}
+.form-actions .btn {
+  font-size: 1em;
+}
 /* Layout Rules
 -------------------------- */
 header:before,
@@ -620,7 +650,7 @@ header > nav li a {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  background: rgba(255, 255, 255, 0.5);
+  background: #7dffd9;
   margin-bottom: 0.5em;
 }
 .accent,

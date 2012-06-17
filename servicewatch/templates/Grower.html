@@ -1,0 +1,6 @@
+<h1> {{grower.name}}</h1>
+<ul>
+	{% for skill in grower.skills.all %}
+	<li>{{ skill.text }}</li>
+	{% endfor %}
+</ul>

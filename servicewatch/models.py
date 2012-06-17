@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from djangoratings.fields import RatingField
+from taggit.managers import TaggableManager
 
 class Sower(models.Model):
 	user = models.ForeignKey(User)
@@ -11,12 +12,22 @@ class Sower(models.Model):
 	def __unicode__(self):
 		return self.title
 
+class Tag(models.Model):
+	text = models.CharField(max_length=40)
+
+	def __unicode__(self):
+		return self.text
+
 class Grower(models.Model):
 	user = models.ForeignKey(User)
+	name = models.CharField(max_length=40)
+	skills = models.ManyToManyField(Tag, related_name='skills_growers')
+	interests = models.ManyToManyField(Tag, related_name='interests_growers')
+
 	rating = RatingField(range=5)
 
 	def __unicode__(self):
-		return self.user
+		return self.title
 
 class Task(models.Model):
 	title = models.CharField(max_length=40)

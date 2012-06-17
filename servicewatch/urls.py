@@ -39,6 +39,7 @@ urlpatterns = patterns('',
     url(r'^sower/img/(?P<path>.+)', views.image_redirect),
 	url(r'^notifications/?', views.notifications),
 	url(r'^search/?', views.search),
+	url(r'^demo/?', views.demo),
 )
 
 urlpatterns += staticfiles_urlpatterns()

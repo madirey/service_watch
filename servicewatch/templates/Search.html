@@ -1,5 +1,26 @@
 {% extends "Base.html" %}
 
+{% block media %}
+<meta charset="utf-8" />
+<script type="text/javascript"
+src="http://maps.google.com/maps?file=api&v=2&key=AIzaSyBH4k3-ZsnI186nqsuO3JqWvG_4lwwMT0o&sensor=false">
+</script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.min.js"></script>
+<script type="text/javascript">
+function initialize() {
+	if (GBrowserIsCompatible()) {
+		var map = new GMap2(document.getElementById("content"));
+		map.setCenter(new GLatLng(37.4419, -122.1419), 13);
+		map.setUIToDefault();
+	}
+}
+</script>
+{% endblock %}
+
 {% block content %}
-Hello, World!
+<script type="text/javascript">
+	$(document).ready(function() {
+		initialize();
+	});
+</script>
 {% endblock %}

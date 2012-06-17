@@ -5,11 +5,12 @@ from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from servicewatch import models, views
 from servicewatch.api import SowerResource, GrowerResource, TaskResource
+from servicewatch import admin as sw_admin
 from tastypie.api import Api
 
 admin.autodiscover()
 admin.site.register(models.Sower)
-admin.site.register(models.Grower)
+admin.site.register(models.Tag)
 admin.site.register(models.Task)
 
 v1_api = Api(api_name='v1')

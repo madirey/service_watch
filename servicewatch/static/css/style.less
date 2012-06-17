@@ -681,3 +681,50 @@ section.primary, section.accent, section.blank {
 #tagline {
 	padding-bottom: 3em;
 }
+
+.notification-block {
+
+	.row {
+	margin-bottom: 1em;
+	}
+
+	.span11 {
+		background: #e8e8e8;
+		padding: 0.5em;
+		-webkit-border-radius: 4px 0 0 4px;
+		   -moz-border-radius: 4px 0 0 4px;
+		        border-radius: 4px 0 0 4px;
+		        min-height: 7.5em;
+	}
+	.span1 {
+		margin-left: 0;
+
+	}
+	.span1 a {
+		display: block;
+	-webkit-border-radius: 0 4px 4px 0;
+	   -moz-border-radius: 0 4px 4px 0;
+	        border-radius: 0 4px 4px 0;
+	        min-height: 6.5em;
+	        border-bottom: none;
+	       background: @accentColor url(../img/arrow.png) center no-repeat;
+	       padding: 0.5em;
+	       margin-left: -2.762430939%;
+	       padding-left: 1em;
+	       font: 1em/1em a;
+	       color: transparent;
+
+	       &:hover {
+	       	background: @primaryBG url(../img/arrow.png) center no-repeat;
+	       
+	       }
+	}
+
+	h2 {
+		font-size: @base * 1.1;
+	}
+	.span2 a {
+		
+		display: block;
+	}
+}

@@ -283,6 +283,9 @@ a:hover {
   display: block;
   border-bottom: none;
 }
+h1 a {
+  border-bottom: none;
+}
 /* 2. Typography */
 h1,
 h2,
@@ -376,6 +379,50 @@ p {
     width: 5.801104972%;
     *width: 5.747913482638298%;
   }
+  .row .offset11 {
+    margin-left: 91.436464082%;
+    *margin-left: 91.38327259263829%;
+  }
+  .row .offset10 {
+    margin-left: 82.87292817100001%;
+    *margin-left: 82.8197366816383%;
+  }
+  .row .offset9 {
+    margin-left: 74.30939226%;
+    *margin-left: 74.25620077063829%;
+  }
+  .row .offset8 {
+    margin-left: 65.74585634900001%;
+    *margin-left: 65.6926648596383%;
+  }
+  .row .offset7 {
+    margin-left: 57.182320438000008%;
+    *margin-left: 57.129128948638304%;
+  }
+  .row .offset6 {
+    margin-left: 48.618784527%;
+    *margin-left: 48.5655930376383%;
+  }
+  .row .offset5 {
+    margin-left: 40.055248616%;
+    *margin-left: 40.0020571266383%;
+  }
+  .row .offset4 {
+    margin-left: 31.491712708%;
+    *margin-left: 31.4385212156383%;
+  }
+  .row .offset3 {
+    margin-left: 22.928176794%;
+    *margin-left: 22.874985304638297%;
+  }
+  .row .offset2 {
+    margin-left: 14.364640883%;
+    *margin-left: 14.311449393638298%;
+  }
+  .row .offset1 {
+    margin-left: 5.801104972%;
+    *margin-left: 5.747913482638298%;
+  }
   .row:before,
   .row:after {
     display: table;
@@ -411,6 +458,26 @@ body {
 /* Module Rules
 -------------------------- */
 /* Nav */
+header > nav li {
+  display: inline-block;
+}
+.nav-stacked a {
+  font-size: 1.25em;
+  border-bottom: none;
+  text-align: right;
+  margin-bottom: 0.5em;
+  display: block;
+}
+.nav-horizontal {
+  background: #caffef;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 0.5em;
+}
+.nav-horizontal li {
+  display: inline-block;
+}
 /* Buttons */
 .btn,
 .btn.accent {
@@ -446,15 +513,21 @@ body {
   font-size: 1.5em;
 }
 .btn-accent {
-  color: #ffffff;
+  color: #333333;
   border: 1px solid #edd93f;
   background: #eedc4d;
   background: -moz-linear-gradient(top, #f2e372 0%, #edd93f 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2e372), color-stop(100%, #edd93f));
-  background: -webkit-linear-gradient(top, #00d99a 0%, #edd93f 100%);
+  background: -webkit-linear-gradient(top, #f2e372 0%, #edd93f 100%);
   background: -o-linear-gradient(top, #f2e372 0%, #edd93f 100%);
   background: -ms-linear-gradient(top, #f2e372 0%, #edd93f 100%);
   background: linear-gradient(top, #f2e372 0%, #edd93f 100%);
+}
+.btn-accent:hover {
+  background: #eedc4d;
+  border: 1px solid #ebd62c;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+  color: #333333;
 }
 /* Block */
 .block {
@@ -464,5 +537,3 @@ body {
   background: #d9fff4;
   margin-bottom: 0.5em;
 }
-/* State Rules
--------------------------- */

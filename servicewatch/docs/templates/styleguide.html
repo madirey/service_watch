@@ -30,6 +30,18 @@
 	<section id="base">
 	<h1>Base Rules</h1>
 	<p>Base styles include setting heading sizes, default link styles, default font styles, and body backgrounds.</p>
+	<div class="row">
+		<div class="span2">
+			<nav class="nav-stacked">
+				<ul>
+					<li><a href="#">Typography</a></li>
+					<li><a href="#">Grid</a></li>
+					<li><a href="#">Tables</a></li>
+					<li><a href="#">Forms</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="span10">
 		<h2>Typography</h2>
 			<div class="row">
 				<div class="span8">
@@ -67,55 +79,120 @@
 				<div class="span7 block">.span7</div>
 			</div><!-- /row -->
 			<h3>Offset</h3>
+			<div class="row">
+				<div class="offset3 span3 block">.span3</div>
+				<div class="span3 block">.span3</div>
+				<div class="span3 block">.span3</div>
+			</div><!-- /row -->
+			<div class="row">
+				<div class="span8 block">.span8</div>
+				<div class="span2 block">.span2</div>
+				<div class="span2 block">.span2</div>
+			</div><!-- /row -->
+			<div class="row">
+				<div class="span4 block">.span4</div>
+				<div class="span1 block">.span1</div>
+				<div class="span7 block">.span7</div>
+			</div><!-- /row -->
 		<h2>Tables</h2>
 			<table>
 				<thead>
 					<th>
-						<td></td>
-						<td></td>
-						<td></td>
+						<td>Heading 1</td>
+						<td>Heading 2</td>
+						<td>Heading 3</td>
 					</th>
 				</thead>
 				<tbody>
 					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
+						<td>Nulla vitae elit libero, a pharetra augue.</td>
+						<td>Curabitur blandit tempus porttitor.</td>
+						<td>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo.</td>
 					</tr>
 					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
+						<td>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui.</td>
+						<td>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</td>
+						<td>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</td>
 					</tr>
 					<tr>
-						<td></td>
-						<td></td>
+						<td>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</td>
+						<td>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</td>
 						<td></td>
 					</tr>
 				</tbody>
 			</table>
 		<h2>Forms</h2>
+		</div><!-- /span8 -->
+	</div><!-- row -->
 	</section>
 	<hr>
 	<section id="module">
 	<h1>Module Rules</h1>
 	<p>It is your navigation bars and your carousels and your dialogs and your widgets and so on. This is the meat of the page. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too.</p>
-		<h2>Nav</h2>
-		<h2>Buttons</h2>
-			<a href="#" class="btn">.btn</a>
-			<a href="#" class="btn btn-small">.btn.btn-small</a>
-			<a href="#" class="btn btn-large">.btn.btn-large</a>
-			<a href="#" class="btn btn-accent">.btn.btn-accent</a>
-		<h2>Alerts</h2>
-		<h2>Highlights</h2>
-		<h2>Progress Bars</h2>
-		<h2>Labels</h2>
-		<h2>Blocks</h2>
-	</section>
-	<hr>
-	<section id="state">
-	<h1>State Rules</h1>
-		<p>A state is something that augments and overrides all other styles. For example, an accordion section may be in a collapsed or expanded state. A message may be in a success or error state. State styles can apply to layout and/or module styles; and State styles indicate a JavaScript dependency.</p>
+		<div class="row">
+			<div class="span2">
+				<nav class="nav-stacked">
+					<ul>
+						<li><a href="#">Nav</a></li>
+						<li><a href="#">Buttons</a></li>
+						<li><a href="#">Alerts</a></li>
+						<li><a href="#">Progress Bars</a></li>
+						<li><a href="#">Labels</a></li>
+						<li><a href="#">Blocks</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="span10">
+				<h2>Nav</h2>
+
+				<div class="row">
+					<div class="span4">
+						<p>.nav-stacked</p>
+						<nav class="nav-stacked span4">
+							<ul>
+								<li><a href="#">Link 1</a></li>
+								<li><a href="#">Link 2</a></li>
+								<li><a href="#">Link 3</a></li>
+								<li><a href="#">Link 4</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="span8">
+						<p>.nav-horizontal</p>
+						<nav class="nav-horizontal">
+							<ul>
+								<li><a href="#">Link 1</a></li>
+								<li><a href="#">Link 2</a></li>
+								<li><a href="#">Link 3</a></li>
+								<li><a href="#">Link 4</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div><!-- /row -->
+
+				<h2>Buttons</h2>
+					<a href="#" class="btn">.btn</a>
+					<a href="#" class="btn btn-small">.btn.btn-small</a>
+					<a href="#" class="btn btn-large">.btn.btn-large</a>
+					<a href="#" class="btn btn-accent">.btn.btn-accent</a>
+
+				<h2>Alerts</h2>
+					<div class="alert">
+						<p>Sed posuere consectetur est at lobortis.</p>
+					</div>
+					<div class="alert alert-low">
+						<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+					<div class="alert alert-high">
+						<p>Nulla vitae elit libero, a pharetra augue.</p>
+					</div>
+
+				<h2>Progress Bars</h2>
+				<h2>Labels</h2>
+				<h2>Blocks</h2>
+			</div>
+
+		</div>
 	</section>
 </div>
 

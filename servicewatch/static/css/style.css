@@ -662,7 +662,10 @@ header > nav li a {
   background: #00b07d;
 }
 .primary .callout-h1 {
-  color: #fff;
+  color: #333;
+}
+.primary .callout-h1 span {
+  background: rgba(255, 255, 255, 0.75);
 }
 .primary .callout-h1.left {
   float: left;

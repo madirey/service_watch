@@ -619,15 +619,18 @@ header {
 }
 
 .accent {
-	background: @accentBG;
+	background: @accentBG url(../img/match-sample.png) center no-repeat;
+
 
 	.callout-h1 {
-
+		&:first-child {
+			margin-top: 2.5em;
+		}
 		&.left {
 			float: left;
 		}
 		&.right {
-			float: left;
+			text-align: right;
 		}
 	}
 }

@@ -613,9 +613,9 @@ header > nav li a {
 }
 .btn:hover {
   background: #00b07d;
-  border: 1px solid #ddcc49;
+  border: 1px solid #007d59;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-  color: #333333;
+  color: #ffffff;
 }
 .btn-small {
   font-size: 0.875em;

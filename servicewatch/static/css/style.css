@@ -537,3 +537,11 @@ header > nav li {
   background: #d9fff4;
   margin-bottom: 0.5em;
 }
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}

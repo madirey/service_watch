@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+	{% block media %}{% endblock %}
+</head>
+
+<body>
+<header>
+	<h1><a href="#">Styles</a></h1>
+
+	<!-- skip nav -->
+	<a href="#content" class="skip">Skip to Content</a>
+
+	<nav>
+		<ul>
+			<li><a href="#base">Base</a></li>
+			<li><a href="#layout">Layout</a></li>
+			<li><a href="#module">Module</a></li>
+			<li><a href="#state">State</a></li>
+			<li><a href="#theme">Theme</a></li>
+		</ul>
+	</nav>
+</header>
+
+<div id="content">
+	{% block content %}{% endblock %}
+</div>
+
+<footer>
+</footer>
+</body>

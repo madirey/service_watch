@@ -7,6 +7,11 @@ class Sower(models.Model):
 	user = models.ForeignKey(User)
 	title = models.CharField(max_length=40, default="You need a title")
 	description = models.CharField(max_length=1000)
+	address = models.CharField(max_length=1000, null=True, blank=True)
+	phone = models.CharField(max_length=20, null=True, blank=True)
+	website = models.URLField(null=True, blank=True)
+	twitter = models.URLField(null=True, blank=True)
+	facebook = models.URLField(null=True, blank=True)
 	rating = RatingField(range=5)
 
 	def __unicode__(self):

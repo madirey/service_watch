@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.min.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.raty.js"></script>
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+	{% load comments %}
+
+</head>
+
+<body>
+<header>
+	<h1><a href="#">Styles</a></h1>
+
+	<!-- skip nav -->
+	<a href="#content" class="skip">Skip to Content</a>
+
+	<nav>
+		<ul>
+			<li><a href="#base">Base</a></li>
+			<li><a href="#layout">Layout</a></li>
+			<li><a href="#module">Module</a></li>
+			<li><a href="#state">State</a></li>
+			<li><a href="#theme">Theme</a></li>
+		</ul>
+	</nav>
+</header>
+
+<div id="content">
+	<h1> {{sower.title}} </h1>
+	<p> {{sower.description}} </p>
+	<h2> Rating </h2>
+	{{sower.rating.get_rating}}
+	<h2> Add a Rating </h2>
+	<div id="star"></div>
+	       {{sower.rating.add}}
+	<h2> Comments </h2>
+	{% render_comment_list for sower %}
+	{% render_comment_form for sower %}
+</div>
+
+<footer>
+
+</footer>
+	 
+	<script type="text/javascript">
+		       $(document).ready(function() {
+		               $('#star').raty();
+		       });
+		</script>
+</body>
+</html>
+

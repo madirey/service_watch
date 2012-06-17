@@ -1,36 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
-</head>
+{% extends "Base.html" %}
 
-<body>
-<header>
-	<h1><a href="#">Styles</a></h1>
+{% block content %}
+<div class="row">
 
-	<!-- skip nav -->
-	<a href="#content" class="skip">Skip to Content</a>
+<div class="span7">
+<h1>{{grower.name}}</h1>
+<p>{{grower.description}}</p>
 
-	<nav>
-		<ul>
-			<li><a href="#base">Base</a></li>
-			<li><a href="#layout">Layout</a></li>
-			<li><a href="#module">Module</a></li>
-			<li><a href="#state">State</a></li>
-			<li><a href="#theme">Theme</a></li>
-		</ul>
-	</nav>
-</header>
+<h3>I've volunteered for</h3>
+<ul>
+	<li>Company A</li>
+	<li>Company B</li>
+</ul>
 
-<div id="content">
-<h1> {{grower.name}}</h1>
+<h3>Skills</h3>
 <ul>
 	{% for skill in grower.skills.all %}
 	<li>{{ skill.text }}</li>
 	{% endfor %}
 </ul>
-</div>
 
-<footer>
-</footer>
-</body>
+</div>
+<div class="span3">
+stuff
+</div>
+</div>
+{% endblock %}

@@ -16,7 +16,7 @@ class Grower(models.Model):
 	rating = RatingField(range=5)
 
 	def __unicode__(self):
-		return self.user
+		return repr(self.user)
 
 class Task(models.Model):
 	title = models.CharField(max_length=40)

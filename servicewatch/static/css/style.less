@@ -402,7 +402,7 @@ section {}
 footer {}
 
 body {
-	margin: 1em;
+	margin: 1em 5em;
 }
 
 /* Module Rules
@@ -413,7 +413,9 @@ header {
 	margin: 3.25em 0;
 
 	h1 { 
-		float: left;
+		@media (min-width: 600px) {
+			float: left;
+		}
 		position: relative;
 		padding:0.25em 0 0 3.5em;
 
@@ -446,13 +448,20 @@ header {
 	}
 
 	> nav {
-	float: right;
-	width: 50%;
-	margin-top: 0.75em;
+		margin-top: 2em;
+		@media (min-width: 600px) {
+			float: right;
+			margin-top: 0.75em;
+			width: 50%;
+		}
 
 		li {
 			display: inline-block;
 			margin-left: 10%;
+
+			&:first-child {
+				margin-left: 0;
+			}
 
 			a {
 				color: #333;
@@ -547,7 +556,7 @@ header {
 /* Block */
 .block {
 	.radius;
-	background: lighten(@baseColor, 58%);
+	background: rgba(255,255,255,0.5);
 	margin-bottom: 0.5em;
 }
 
@@ -560,8 +569,8 @@ header {
 }
 
 section.primary, section.accent {
-	margin: 0 -1em;
-	padding: 1em;
+	margin: 0 -5em;
+	padding: 2em 5em;
 }
 
 .callout {

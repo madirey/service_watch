@@ -469,7 +469,7 @@ header:after {
   clear: both;
 }
 body {
-  margin: 1em;
+  margin: 1em 5em;
 }
 /* Module Rules
 -------------------------- */
@@ -478,9 +478,13 @@ header {
   margin: 3.25em 0;
 }
 header h1 {
-  float: left;
   position: relative;
   padding: 0.25em 0 0 3.5em;
+}
+@media (min-width: 600px) {
+  header h1 {
+    float: left;
+  }
 }
 header h1:before,
 header h1:after {
@@ -510,13 +514,21 @@ header h1 a span {
   font-weight: 400;
 }
 header > nav {
-  float: right;
-  width: 50%;
-  margin-top: 0.75em;
+  margin-top: 2em;
+}
+@media (min-width: 600px) {
+  header > nav {
+    float: right;
+    margin-top: 0.75em;
+    width: 50%;
+  }
 }
 header > nav li {
   display: inline-block;
   margin-left: 10%;
+}
+header > nav li:first-child {
+  margin-left: 0;
 }
 header > nav li a {
   color: #333;
@@ -603,7 +615,7 @@ header > nav li a {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  background: #d9fff4;
+  background: rgba(255, 255, 255, 0.5);
   margin-bottom: 0.5em;
 }
 
@@ -622,8 +634,8 @@ header > nav li a {
 }
 section.primary,
 section.accent {
-  margin: 0 -1em;
-  padding: 1em;
+  margin: 0 -5em;
+  padding: 2em 5em;
 }
 .callout {
   font-size: 1.75em;

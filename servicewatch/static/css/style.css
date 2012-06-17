@@ -469,7 +469,12 @@ header:after {
   clear: both;
 }
 body {
-  margin: 1em 5em;
+  margin: 1em 2em;
+}
+@media (min-width: 600px) {
+  body {
+    margin: 1em 5em;
+  }
 }
 /* Module Rules
 -------------------------- */
@@ -626,16 +631,85 @@ header > nav li a {
 .right {
   float: right;
 
+.accent,
+.primary,
+.blank {
+  font-size: 0.5em;
+}
+@media (min-width: 600px) {
+  .accent,
+  .primary,
+  .blank {
+    font-size: 1em;
+  }
+}
+.accent .callout-h1,
+.primary .callout-h1,
+.blank .callout-h1 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  margin-bottom: 0.5em;
+  display: block;
+}
+.accent .callout-h1 span,
+.primary .callout-h1 span,
+.blank .callout-h1 span {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0.25em 0.5em;
+}
 .accent {
   background: #f2e57a;
+}
+.accent .callout-h1.left {
+  float: left;
+}
+.accent .callout-h1.right {
+  float: left;
 }
 .primary {
   background: #00b07d;
 }
+.primary .callout-h1 {
+  color: #333;
+}
+.primary .callout-h1 span {
+  background: rgba(255, 255, 255, 0.75);
+}
+.primary .callout-h1.left {
+  float: left;
+}
+.primary .callout-h1.right {
+  text-align: right;
+}
+.blank {
+  background: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.blank .callout-h1 {
+  color: #fff;
+}
+.blank .callout-h1 span {
+  background: rgba(0, 176, 125, 0.85);
+}
+.blank.left {
+  float: left;
+}
+.blank.right {
+  text-align: right;
+}
 section.primary,
-section.accent {
-  margin: 0 -5em;
-  padding: 2em 5em;
+section.accent,
+section.blank {
+  margin: 0 -2em;
+  padding: 2em;
+}
+@media (min-width: 600px) {
+  section.primary,
+  section.accent,
+  section.blank {
+    margin: 0 -5em;
+    padding: 2em 5em;
+  }
 }
 .callout {
   font-size: 1.75em;

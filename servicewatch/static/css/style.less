@@ -16,6 +16,8 @@
 @backgroundColor: #e8e8e8;
 @baseColor: #00b07d;
 @accentColor: #eedc4d;
+@accentBG: #f2e57a;
+@primaryBG: #00b07d;
 @linkColor: #2d8f6a;
 @linkHover: @baseColor;
 
@@ -372,7 +374,17 @@ input[type="checkbox"], input[type="radio"] {}
 /* Layout Rules
 -------------------------- */
 
-header {}
+header {
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+	}
+	&:after {
+		clear: both;
+	}
+
+}
 
 section {}
 
@@ -386,9 +398,58 @@ body {
 -------------------------- */
 
 /* Nav */
-header > nav {
-	li {
-		display: inline-block;
+header { 
+	margin: 3.25em 0;
+
+	h1 { 
+		float: left;
+		position: relative;
+		padding:0.25em 0 0 3.5em;
+
+		&:before, &:after {
+			content: "";
+			position: absolute;
+			background: rgba(0,176,125,0.5);
+			border-radius: 100%;
+		}
+		&:before {
+			width: 2em;
+			height: 2em;
+			top: 0;
+			left: 0;
+		}
+		&:after {
+			width: 1.5em;
+			height: 1.5em;
+			top: 0;
+			left: 1.5em;
+		}
+
+		a {
+		color: #333;
+		font-size: @base * 1.875;
+		font-weight: 700;
+
+			span { font-weight: 400;}
+		}
+	}
+
+	> nav {
+	float: right;
+	width: 50%;
+	margin-top: 0.75em;
+
+		li {
+			display: inline-block;
+			margin-left: 10%;
+
+			a {
+				color: #333;
+				font-size: @base * 0.8;
+				border-bottom: none;
+				text-transform: uppercase;
+			}
+		}
 	}
 }
 
@@ -470,4 +531,17 @@ header > nav {
 	.radius;
 	background: lighten(@baseColor, 58%);
 	margin-bottom: 0.5em;
+}
+
+.accent {
+	background: @accentBG;
+}
+
+.primary {
+	background: @primaryBG;
+}
+
+section.primary, section.accent {
+	margin: 0 -1em;
+	padding: 0 1em;
 }

@@ -21,10 +21,14 @@
 		</ul>
 	</nav>
 </header>
-
-<div id="content">
-	{{ task.title }}
-</div>
-
+{% for task in sower.tasks.all %}
+	<div class="span9">
+		<h2>{{task.title}}</h2>
+		<h3>{{task.grower}}</h3>
+		<p>{{task.description}}</p>
+		<p><span>{{task.address}}</span><p>
+		<p><span>{{task.time}}</span><p>
+	</div>
+{% endfor %}
 <footer></footer>
 </body>

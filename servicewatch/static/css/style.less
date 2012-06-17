@@ -485,7 +485,9 @@ header {
 
 	> nav {
 		margin-top: 2em;
+
 		@media (min-width: 600px) {
+			text-align: right;
 			float: right;
 			margin-top: 0.75em;
 			width: 50%;
@@ -598,6 +600,9 @@ header {
 
 .accent, .primary, .blank {
 	font-size: @base * 0.5;
+	min-height: 300px;
+	border-bottom: 10px solid #fff;
+
 	@media (min-width: 600px) {
 		font-size: @base * 1;
 	}
@@ -614,15 +619,18 @@ header {
 }
 
 .accent {
-	background: @accentBG;
+	background: @accentBG url(../img/match-sample.png) center no-repeat;
+
 
 	.callout-h1 {
-
+		&:first-child {
+			margin-top: 2.5em;
+		}
 		&.left {
 			float: left;
 		}
 		&.right {
-			float: left;
+			text-align: right;
 		}
 	}
 }
@@ -646,11 +654,15 @@ header {
 }
 
 .blank {
-	background: #fff;
+	background: url(../img/sample-map.png) center;
 	text-shadow: 0 1px 3px rgba(0,0,0,0.25);
 
 	.callout-h1 {
 		color: #fff;
+
+		&:first-child {
+			margin-top: 2.5em;
+		}
 
 		span {
 			background: rgba(0,176,125, 0.85);
@@ -681,3 +693,56 @@ section.primary, section.accent, section.blank {
 #tagline {
 	padding-bottom: 3em;
 }
+
+.notification-block {
+
+	.row {
+	margin-bottom: 1em;
+	}
+
+	.span11 {
+		background: #e8e8e8;
+		padding: 0.5em;
+		-webkit-border-radius: 4px 0 0 4px;
+		   -moz-border-radius: 4px 0 0 4px;
+		        border-radius: 4px 0 0 4px;
+		        min-height: 7.5em;
+	}
+	.span1 {
+		margin-left: 0;
+
+	}
+	.span1 a {
+		display: block;
+	-webkit-border-radius: 0 4px 4px 0;
+	   -moz-border-radius: 0 4px 4px 0;
+	        border-radius: 0 4px 4px 0;
+	        min-height: 6.5em;
+	        border-bottom: none;
+	       background: @accentColor url(../img/arrow.png) center no-repeat;
+	       padding: 0.5em;
+	       margin-left: -2.762430939%;
+	       padding-left: 1em;
+	       font: 1em/1em a;
+	       color: transparent;
+
+	       &:hover {
+	       	background: @primaryBG url(../img/arrow.png) center no-repeat;
+	       
+	       }
+	}
+
+	h2 {
+		font-size: @base * 1.1;
+	}
+	.span2 a {
+		
+		display: block;
+	}
+}
+
+#black-image{
+  width:200px;
+  height:200px;
+  background-color:black;
+  }

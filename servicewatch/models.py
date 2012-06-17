@@ -12,6 +12,7 @@ class Sower(models.Model):
 	website = models.URLField(null=True, blank=True)
 	twitter = models.URLField(null=True, blank=True)
 	facebook = models.URLField(null=True, blank=True)
+	#logo = models.ImageField(upload_to="logo/")
 	rating = RatingField(range=5)
 
 	def __unicode__(self):
@@ -27,6 +28,7 @@ class Grower(models.Model):
 	user = models.ForeignKey(User)
 	name = models.CharField(max_length=40)
 	skills = models.ManyToManyField(Tag, related_name='skills_growers', blank=True)
+	#avatar = models.ImageField(upload_to="avatar/")
 	interests = models.ManyToManyField(Tag, related_name='interests_growers', blank=True)
 
 	rating = RatingField(range=5)
@@ -42,4 +44,4 @@ class Task(models.Model):
 
 	def __unicode__(self):
 		return self.title
-class 
+

@@ -32,10 +32,13 @@ urlpatterns = patterns('',
 	url(r'^api/', include(v1_api.urls)),
 	url(r'^sower/(?P<id>\d+)', views.sower_profile),
     url(r'^grower/(?P<id>\d+)', views.grower_profile),
+    url(r'^user/survey/?', views.user_survey),
+    url(r'^org/survey/?', views.org_survey),
     url(r'^task/(?P<id>\d+)', views.task_profile),
     url(r'^rating', views.sower_profile),
     url(r'^sower/img/(?P<path>.+)', views.image_redirect),
-    (r'^simple-autocomplete/', include('simple_autocomplete.urls')) 
+	url(r'^notifications/?', views.notifications),
+	url(r'^search/?', views.search),
 )
 
 urlpatterns += staticfiles_urlpatterns()

@@ -623,14 +623,6 @@ header > nav li a {
   background: rgba(255, 255, 255, 0.5);
   margin-bottom: 0.5em;
 }
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-
 .accent,
 .primary,
 .blank {

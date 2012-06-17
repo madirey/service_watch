@@ -30,7 +30,7 @@ def task_profile(request, id):
 			context_instance=RequestContext(request))
 
 def notifications(request):
-	return render_to_response('Notifications.html', { }, 
+	return render_to_response('Notifications.html', { 'tasks': Task.objects.all() }, 
 			context_instance=RequestContext(request))
 
 def search(request):
